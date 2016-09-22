@@ -1,10 +1,9 @@
-"""
 Dask on GridEngine system
 =========================
 
 Deploy a pool of Dask workers through SGE/PBS system using the `drmaa` library.
 
-This package extends `distributed`_, a lightweight library for distributed
+This package extends `dask.distributed`_, a lightweight library for distributed
 computing in Python, which  exports `dask`_ APIs to moderate sized clusters.
 One signle object will start scheduler and workers and will also takes care of
 stopping them once the work is done.
@@ -22,7 +21,7 @@ Examples
 
 A first example could be
 
-.. code::
+.. code:: python
 
     sge = GridEngineScheduler()
     sge.start_pool(10)
@@ -31,7 +30,7 @@ A first example could be
 
 But the provided scheduler can also be used as context manager:
 
-.. code::
+.. code:: python
 
     with GridEngineScheduler(nworkers=10) as sge:
         # ... work ....
@@ -39,6 +38,6 @@ But the provided scheduler can also be used as context manager:
 
 This work was inspired by Matthew Rocklin's `blog post`_
 
-.. dask : https://dask.readthedocs.io/en/latest/
-.. distributed : https://distributed.readthedocs.io/en/latest/
-.. blog post : http://matthewrocklin.com/blog/work/2016/02/26/dask-distributed-part-3
+.. _dask : https://dask.readthedocs.io/en/latest/
+.. _dask.distributed : https://distributed.readthedocs.io/en/latest/
+.. _blog post : http://matthewrocklin.com/blog/work/2016/02/26/dask-distributed-part-3
