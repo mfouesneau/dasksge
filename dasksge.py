@@ -1,7 +1,7 @@
 """
 Deploy a pool of Dask workers through SGE/PBS system using the `drmaa` library.
 
-One signle object will start scheduler and workers and will also takes care of
+One single object will start scheduler and workers and will also takes care of
 stopping them once the work is done.
 
 The default behavior is to run as many workers as requested with 1 thread each.
