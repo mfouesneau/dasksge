@@ -35,6 +35,13 @@ But the provided scheduler can also be used as context manager:
     with GridEngineScheduler(nworkers=10) as sge:
         # ... work ....
 
+Installation
+------------
+
+.. code::
+
+    pip install 'git+ssh://git@github.com/mfouesneau/dasksge.git'
+
 
 This work was inspired by Matthew Rocklin's `blog post`_
 
